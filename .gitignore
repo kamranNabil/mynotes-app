@@ -1,0 +1,30 @@
+# Backend (Spring Boot)
+backend/target/
+backend/.mvn/
+backend/mvnw.cmd
+backend/mvnw
+
+# Frontend (React + Vite)  
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Build outputs
+build/
+out/
