@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: mynotes-backend
+    env: java
+    plan: free
+    buildCommand: cd backend && ./mvnw clean package -DskipTests
+    startCommand: cd backend && java -jar target/*.jar --spring.profiles.active=prod
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+
+  - type: static
+    name: mynotes-frontend
+    plan: free
+    buildCommand: cd frontend && npm run build
+    publishDirectory: frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://mynotes-backend.onrender.com
